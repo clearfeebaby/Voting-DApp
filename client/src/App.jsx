@@ -3,6 +3,7 @@ import Intro from "./components/Intro/";
 import Setup from "./components/Setup";
 import Demo from "./components/Demo";
 import Footer from "./components/Footer";
+import Toto from "./components/Toto";
 import "./App.css";
 
 function App() {
@@ -10,13 +11,15 @@ function App() {
     <EthProvider>
       <div id="App" >
         <div className="container">
+          <Toto />
+          {/* <hr />
           <Intro />
           <hr />
           <Setup />
           <hr />
           <Demo />
           <hr />
-          <Footer />
+          <Footer /> */}
         </div>
       </div>
     </EthProvider>
