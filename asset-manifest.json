@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/Voting-DApp/static/css/main.a1f0d5c1.chunk.css",
-    "main.js": "/Voting-DApp/static/js/main.6ea5ff55.chunk.js",
-    "main.js.map": "/Voting-DApp/static/js/main.6ea5ff55.chunk.js.map",
+    "main.js": "/Voting-DApp/static/js/main.00a2a859.chunk.js",
+    "main.js.map": "/Voting-DApp/static/js/main.00a2a859.chunk.js.map",
     "runtime-main.js": "/Voting-DApp/static/js/runtime-main.93750970.js",
     "runtime-main.js.map": "/Voting-DApp/static/js/runtime-main.93750970.js.map",
-    "static/js/2.0068e39f.chunk.js": "/Voting-DApp/static/js/2.0068e39f.chunk.js",
-    "static/js/2.0068e39f.chunk.js.map": "/Voting-DApp/static/js/2.0068e39f.chunk.js.map",
+    "static/js/2.e5b14f5d.chunk.js": "/Voting-DApp/static/js/2.e5b14f5d.chunk.js",
+    "static/js/2.e5b14f5d.chunk.js.map": "/Voting-DApp/static/js/2.e5b14f5d.chunk.js.map",
     "index.html": "/Voting-DApp/index.html",
     "static/css/main.a1f0d5c1.chunk.css.map": "/Voting-DApp/static/css/main.a1f0d5c1.chunk.css.map",
-    "static/js/2.0068e39f.chunk.js.LICENSE.txt": "/Voting-DApp/static/js/2.0068e39f.chunk.js.LICENSE.txt"
+    "static/js/2.e5b14f5d.chunk.js.LICENSE.txt": "/Voting-DApp/static/js/2.e5b14f5d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.93750970.js",
-    "static/js/2.0068e39f.chunk.js",
+    "static/js/2.e5b14f5d.chunk.js",
     "static/css/main.a1f0d5c1.chunk.css",
-    "static/js/main.6ea5ff55.chunk.js"
+    "static/js/main.00a2a859.chunk.js"
   ]
 }
