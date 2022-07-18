@@ -1,24 +1,42 @@
-// import getWeb3 from "../getWeb3";
-// import VotingContract from "../contracts/Voting.json";
+import useEth from "../contexts/EthContext/useEth";
+import { useRef, useEffect, useState } from "react";
 
-async function Toto() {
-    const web3 = await getWeb3();
+function Toto() {
 
-      // Use web3 to get the user's accounts.
-      const accounts = await web3.eth.getAccounts();
+  const { state: { contract, accounts } } = useEth();
+  const state = useEth();
+  // const { contract, accounts } = state
+  const [currentStep, setCurrentStep] = useState(null);
 
-      // Get the contract instance.
-      const networkId = await web3.eth.net.getId();
-      const deployedNetwork = VotingContract.networks[networkId];
-      const instance = new web3.eth.Contract(
-        VotingContract.abi,
-        deployedNetwork && deployedNetwork.address,
+  const workflowStatus = [
+    'Enregistrement des électeurs',
+    'Enregistrement des propositions',
+    'Fin des propositions',
+    'Enregistrement des votes',
+    'Fin des votes',
+    'Comptage'
+  ];
+
+  const getCurrentStep = async () => {
+    try {
+      await contract.methods.workflowStatus().call({ from: accounts[0] }).then(
+        (r) => {
+          setCurrentStep(r);
+        }
       );
-    return (
-      <>
-        <div>toto</div>
-      </>
-    );
+    } catch (error) {
+    }
+  }
+
+  getCurrentStep();
+
+  return (
+    <>
+      <div>{workflowStatus[currentStep]}</div>
+      <div>{accounts}</div>
+      {/* <div>toto</div> */}
+    </>
+  );
 }
 
 export default Toto;
