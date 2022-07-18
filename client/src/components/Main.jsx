@@ -8,7 +8,7 @@ function Main() {
     const { state: { contract, accounts } } = useEth();
     const [statusWorkflowNb, setstatusWorkflowNb] = useState(0);
     const [userStatus, setUserStatus] = useState('');
-    const [owner, setOwner] = useState('');
+    const [owner, setOwner] = useState(false);
     const [voterAdresses, setVoterAdresses] = useState([]);
 
     useEffect(() => {
@@ -65,7 +65,7 @@ function Main() {
     return (
         <>
             <Header statusWorkflowNb={statusWorkflowNb} userStatus={userStatus} />
-            {userStatus === 'nonVoter' ? <div className="bg-black">Désolé mais vous n'avez pas accès au vote</div> : <Body statusWorkflowNb={statusWorkflowNb} setstatusWorkflowNb={setstatusWorkflowNb} userStatus={userStatus} />}
+            {userStatus === 'nonVoter' ? <div className="bg-black">Désolé mais vous n'avez pas accès au vote</div> : <Body statusWorkflowNb={statusWorkflowNb} setstatusWorkflowNb={setstatusWorkflowNb} userStatus={userStatus} voterAdresses={voterAdresses} setVoterAdresses={setVoterAdresses} />}
             <Footer />
         </>
     );

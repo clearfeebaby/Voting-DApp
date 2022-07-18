@@ -7,7 +7,7 @@ import VotesTallied from "./VotesTallied";
 import VotingSessionEnded from "./VotingSessionEnded";
 import VotingSessionStarted from "./VotingSessionStarted";
 
-function Body({ statusWorkflowNb, setstatusWorkflowNb, userStatus }) {
+function Body({ statusWorkflowNb, setstatusWorkflowNb, userStatus, voterAdresses, setVoterAdresses }) {
   const [renderStep, setRenderStep] = useState(<></>);
   const { state: { contract, accounts } } = useEth();
   const workflowStatus = {
@@ -55,7 +55,7 @@ function Body({ statusWorkflowNb, setstatusWorkflowNb, userStatus }) {
     console.log(workflowStatus[statusWorkflowNb])
     switch (workflowStatus[statusWorkflowNb]) {
       case 'RegisteringVoters':
-        setRenderStep(<FormRegisteringVoters contract={contract} accounts={accounts} userStatus={userStatus} />);
+        setRenderStep(<FormRegisteringVoters contract={contract} accounts={accounts} userStatus={userStatus} voterAdresses={voterAdresses} setVoterAdresses={setVoterAdresses} />);
         break;
       case 'startProposalsRegistering':
         setRenderStep(<ProposalsRegistrationStarted />);
